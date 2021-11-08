@@ -47,6 +47,22 @@ public class Complaint {
 	
 	
 	
+	
+	
+	/**
+	 * @param complainDescription
+	 * @param createdBy
+	 * @param createdAt
+	 */
+	public Complaint(@NotEmpty @Size(max = 150, message = "Please Enter a description") String complainDescription,
+			@NotEmpty(message = "Please Enter a username of user") @Size(min = 5, max = 10, message = "Enter a username between 5 to 10 characters") String createdBy,
+			String createdAt) {
+		super();
+		this.complainDescription = complainDescription;
+		this.createdBy = createdBy;
+		this.createdAt = createdAt;
+	}
+
 	public Complaint(Long complaintId,
 			@NotEmpty @Size(max = 150, message = "Please Enter a description") String complainDescription,
 			@NotEmpty(message = "Please Enter a username of user") @Size(min = 5, max = 10, message = "Enter a username between 5 to 10 characters") String createdBy,
